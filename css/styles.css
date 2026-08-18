@@ -10970,3 +10970,217 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+/* Projects */
+.projects-heading {
+  max-width: 47rem;
+}
+
+.project-eyebrow {
+  margin-bottom: 0.4rem;
+  color: var(--bs-primary);
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 1rem;
+  box-shadow: 0 0.75rem 2rem rgba(33, 37, 41, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+@media (hover: hover) {
+  .project-card:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2.5rem rgba(33, 37, 41, 0.14);
+  }
+}
+
+.project-card-visual {
+  position: relative;
+  display: flex;
+  min-height: 13.5rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-card-visual::before,
+.project-card-visual::after {
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  content: "";
+  filter: blur(0.25rem);
+}
+
+.project-card-visual::before {
+  top: -6rem;
+  right: -3rem;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.project-card-visual::after {
+  bottom: -7rem;
+  left: -2rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.project-card-visual-cafe {
+  background: linear-gradient(135deg, #2b1b16 0%, #7b3f25 58%, #c97845 100%);
+}
+
+.project-card-visual-akyat {
+  background: linear-gradient(135deg, #071b2d 0%, #0b3a4a 55%, #176e67 100%);
+}
+
+.project-art {
+  position: relative;
+  z-index: 1;
+  width: 7.5rem;
+  height: 7.5rem;
+  object-fit: cover;
+  border: 0.3rem solid rgba(255, 255, 255, 0.28);
+  border-radius: 1.65rem;
+  box-shadow: 0 1.1rem 2rem rgba(0, 0, 0, 0.28);
+}
+
+.project-status {
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.65rem;
+  color: #fff;
+  background: rgba(10, 15, 20, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  backdrop-filter: blur(0.35rem);
+}
+
+.project-status-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  background: #59d98e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.2rem rgba(89, 217, 142, 0.18);
+}
+
+.project-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.65rem;
+}
+
+.project-type {
+  margin-bottom: 0.35rem;
+  color: var(--bs-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.project-title {
+  margin-bottom: 0.7rem;
+  text-transform: none;
+}
+
+.project-description {
+  margin-bottom: 1.2rem;
+  color: #5d6771;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-tags span {
+  padding: 0.35rem 0.6rem;
+  color: #495057;
+  background: #f1f4f8;
+  border-radius: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  align-items: center;
+  margin-top: auto;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #495057;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  color: var(--bs-primary);
+}
+
+.project-link-primary {
+  padding: 0.7rem 0.9rem;
+  color: #fff;
+  background: var(--bs-primary);
+  border-radius: 0.5rem;
+}
+
+.project-link-primary:hover {
+  color: #fff;
+  background: #2d55a0;
+}
+
+@media (max-width: 767.98px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-visual {
+    min-height: 12rem;
+  }
+
+  .project-card-body {
+    padding: 1.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card {
+    transition: none;
+  }
+}
