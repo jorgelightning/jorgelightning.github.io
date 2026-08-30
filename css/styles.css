@@ -10880,6 +10880,22 @@ p.lead {
   outline-color: #d48a6e;
 }
 
+.sidebar-transition-bolt {
+  position: absolute;
+  left: 50%;
+  bottom: -2.15rem;
+  display: block;
+  width: 2.8rem;
+  height: 4.7rem;
+  transform: translateX(-50%);
+  background-color: #f1c84b;
+  -webkit-clip-path: polygon(45% 0, 88% 0, 68% 37%, 100% 37%, 31% 100%, 44% 56%, 12% 56%);
+  clip-path: polygon(45% 0, 88% 0, 68% 37%, 100% 37%, 31% 100%, 44% 56%, 12% 56%);
+  filter: drop-shadow(0 0.25rem 0.18rem rgba(39, 55, 78, 0.24));
+  pointer-events: none;
+  z-index: 1031;
+}
+
 @media (min-width: 992px) {
   #sideNav {
     padding-left: 0;
@@ -10892,16 +10908,25 @@ p.lead {
     flex-direction: column;
     width: 17rem;
     height: 100vh;
+    overflow: visible;
   }
   #sideNav .navbar-brand {
     display: flex;
     margin: auto auto 0;
     padding: 0.5rem;
   }
-  #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  #sideNav .navbar-brand .sidebar-brand-placeholder {
+    width: 10rem;
+    height: 10rem;
+  }
+  #sideNav .sidebar-transition-bolt {
+    top: calc(50% - 9.25rem);
+    right: -2.55rem;
+    bottom: auto;
+    left: auto;
+    width: 5.1rem;
+    height: 8.3rem;
+    transform: none;
   }
   #sideNav .navbar-collapse {
     display: flex;
